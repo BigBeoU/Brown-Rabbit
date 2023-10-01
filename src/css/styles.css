@@ -144,7 +144,7 @@ a {
       justify-content: space-between;
    }
    .logo {
-      width: 20rem;
+      width: 450rem;
       height: 5rem;
       margin: 1.4rem 0 2rem 0;
       padding-left: 1rem;
@@ -174,27 +174,18 @@ a {
       height: 80%;
       align-items: center;
    }
-
    .hero__content {
-      display: flex;
-      flex-direction: column;
-      margin: 2rem;
+      display: grid;
+      grid-template-rows: 1fr;
    }
 
-   .article {
-      display: grid;
-      grid-template-rows: 1fr 1fr;
-      margin: 2rem;
-   }
    .block__heading {
-      display: flex;
-      width: 20rem;
-      heigh: 20rem;
-      align-items: center;
       background-color: var(--color-secondary);
       text-align: center;
       z-index: 1;
       font-size: 2.5rem;
+      display: flex;
+      align-items: center;
    }
 
    .arrow_slide {
@@ -203,6 +194,6 @@ a {
       position: relative;
       padding: 0 10px;
       justify-content: space-between;
-      margin-top: -400px;
+      margin-top: -250px;
    }
 }
