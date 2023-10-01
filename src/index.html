@@ -12,13 +12,11 @@
    <nav>
       <div class="collapsible ">
          <span class="menu">
-            <svg class="logo">
-               <use xlink:href="./assets/logo/sprite.svg#logo-white.png"></use>
-            </svg>
+            <img class="logo" src="./assets/logo/logo-white.svg" alt="">
             <svg class="search">
                <use xlink:href="./assets/icons/sprite.svg#search"></use>
             </svg>
-            <svg class=" burger__menu" xmlns="http://www.w3.org/2000/svg" viewBox="1 1 5 8" stroke="#eee"
+            <svg class="burger__menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#eee"
                stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
                <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
                   <animate dur="0.2s" attributeName="d"
@@ -65,6 +63,40 @@
          </div>
       </div>
    </nav>
+   <section class="banner">
+      <div>
+         <div class="image__container">
+            <img src="./assets/images/posts/Post thumbnail-3.png" alt="" id="sliderImage" class="slide-image">
+         </div>
+         <header class=" hero__content">
+            <span class="arrow_slide">
+               <svg class="arrow-left" onclick="slideImage('backward')" width=" 24" height="24"
+                  xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                  <path d="M20 .755l-14.374 11.245 14.374 11.219-.619.781-15.381-12 15.391-12 .609.755z" />
+               </svg>
+               <svg class="arrow-right" onclick="slideImage('forward')" width=" 24" height="24"
+                  xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                  <path d="M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z" />
+               </svg>
+            </span>
+         </header>
+      </div>
+   </section>
+   <section class="article">
+      <div class="block__heading ">
+         <p>
+            "To create an enviroment in which knowledge about coffee and its sphere can be obtained"
+         </p>
+      </div>
+      <img class="article__items" src="./assets/images/posts/Post thumbnail-1.png" alt="">
+      <h1 class="article__items">Wonderful Copenhagen 2021</h1>
+      <p class="article__items">Published 12/07/2021</p>
+      <p class="article__items">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+         invidunt ut labore et
+         dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+         clita kasd gubergren, no sea takimata sanctus est...</p>
+      <button class="btn article__items" onclick="location.href='#';">Read more</button>
+   </section>
    <script src="js/main.js"></script>
 </body>
 
