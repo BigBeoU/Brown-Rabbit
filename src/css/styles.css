@@ -1,0 +1,172 @@
+@import "./normalize.css";
+:root {
+   --color-primary: #70707070;
+   --color-secondary: #000000;
+   --color-headings: #dddddd;
+   --color-body: #ffffff;
+   --color-body-darker: #70707070;
+}
+html {
+   font-size: 62.5%;
+}
+body {
+   font-family: "Times New Roman", Times, serif;
+   color: var(--color-body);
+   background-color: var(--color-primary);
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+   color: var(--color-headings);
+}
+
+h1 {
+   font-size: 40rem;
+}
+
+h2 {
+   font-size: 35rem;
+}
+
+h3 {
+   font-size: 30rem;
+}
+h4 {
+   font-size: 30rem;
+}
+
+h5 {
+   font-size: 20rem;
+}
+h6 {
+   font-size: 18rem;
+}
+p {
+   font-size: 18rem;
+}
+
+/* Button */
+button {
+   padding: 0.5rem 1rem 0.5rem 1rem;
+   color: var(--color-secondary);
+   margin: 0.5rem;
+   border: none;
+}
+button:hover {
+   color: var(--color-body);
+   background-color: var(--color-secondary);
+}
+
+/*Media Icon */
+.media__icon {
+   width: 2rem;
+   height: 2rem;
+   margin-left: 1rem;
+}
+
+/* Arrow */
+.arrow {
+   margin-left: 2rem;
+   padding-top: 1rem;
+}
+.burger__menu {
+   display: none;
+}
+.search {
+   width: 20rem;
+   height: 20x;
+   margin: 1rem;
+}
+.search:hover {
+   transform: rotate(45deg);
+}
+/* Burger menu */
+.burger__menu {
+   display: none;
+   width: 50rem;
+   height: 50rem;
+}
+/* Link */
+a {
+   text-decoration: none;
+}
+.list {
+   list-style: none;
+   font-size: 2rem;
+   margin: 4rem 2rem 0 2rem;
+}
+.list__item {
+   margin-bottom: 4rem;
+}
+.list__item > a {
+   color: #d2d0db;
+   text-decoration: none;
+}
+.logo {
+   margin: 0 0 0 2rem;
+   padding: 0;
+}
+@media screen and (min-width: 768px) {
+   body {
+      background-color: var(--color-secondary);
+   }
+   .media__icon {
+      width: 2rem;
+      height: 2rem;
+      margin-left: 2rem;
+      fill: var(--color-body);
+   }
+   .media {
+      align-content: center;
+   }
+
+   /* Collapsible */
+
+   .collapsible__media {
+      text-align: center;
+   }
+   .list__item {
+      padding-bottom: 2rem;
+   }
+   .collapsible__content {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: all 0.5s;
+   }
+   .collapsible--expanded .collapsible__content {
+      max-height: 100vh;
+      opacity: 1;
+   }
+   header {
+      display: flex;
+      justify-content: space-between;
+   }
+   nav {
+      margin: 0;
+      padding: 0;
+   }
+   .menu {
+      display: flex;
+      justify-content: space-between;
+   }
+   .logo {
+      width: 450rem;
+      height: 5rem;
+      margin-top: 1.4rem;
+      margin-left: 0;
+   }
+   .search {
+      width: 20rem;
+      height: 4rem;
+      margin: 1rem;
+   }
+   .burger__menu {
+      display: inline;
+      width: 50rem;
+      height: 4rem;
+      margin: 1rem 1.3rem 1rem 1rem;
+   }
+}
