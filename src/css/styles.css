@@ -101,6 +101,10 @@ a {
       display: flex;
       flex-direction: column;
    }
+   nav {
+      margin: 0;
+      padding: 2rem 0 2rem 2rem;
+   }
 
    .menu {
       display: flex;
@@ -202,75 +206,68 @@ a {
       opacity: 1;
    }
 
-   /* Collapsible */
-
-   /* .collapsible__media {
-      text-align: center;
-   }
-   .list__item {
-      padding-bottom: 2rem;
-   }
-   .collapsible__content {
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
-      transition: all 0.5s;
-   }
-   .collapsible--expanded .collapsible__content {
-      max-height: 100vh;
-      opacity: 1;
-   } */
-   nav {
-      margin: 0;
-      padding: 0;
+   /* Banner */
+   .card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      overflow: visible;
+      height: 100%;
    }
 
-   .image__container {
-      width: 100%;
-   }
    .slide-image {
       object-fit: cover;
       transition: opacity 0.5s ease-in-out;
       width: 100%;
-      height: 80%;
+      height: 35rem;
       align-items: center;
-   }
-   .hero__content {
-      display: grid;
-      grid-template-rows: 1fr;
    }
 
-   .block__heading {
+   .card-body {
+      position: absolute;
       background-color: var(--color-secondary);
-      text-align: center;
-      z-index: 1;
+      color: var(--color-headings);
+      text-align: center; /* Centers text horizontally */
+      width: 80%;
+      margin-top: 70%;
+      height: 25rem;
+      overflow: visible;
+   }
+
+   .card-text {
+      margin: 0;
       font-size: 2.5rem;
-      display: flex;
-      align-items: center;
+      text-align: center;
+      padding: 4rem 1rem 2rem 1rem;
+      word-wrap: break-word;
+   }
+
+   .hero__content {
+      position: absolute;
+      width: 100%;
    }
 
    .arrow_slide {
       fill: var(--color-body);
       display: flex;
-      position: relative;
       padding: 0 10px;
       justify-content: space-between;
-      margin-top: -250px;
    }
-   .text {
+   /* .text {
       position: relative;
       display: block;
       text-overflow: ellipsis;
    }
    .show-more {
-      /*   width: 690px;  */
       position: relative;
    }
    .show-more-height {
       height: 65px;
       overflow: hidden;
-   }
+   } */
 }
+
 /* @media (min-width: 1200px) {
    .navbar {
       display: flex;
