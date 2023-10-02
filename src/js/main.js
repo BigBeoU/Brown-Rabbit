@@ -11,6 +11,7 @@ burgerMenus.forEach((item) => {
       }
    });
 });
+
 let currentSlide = 0;
 const images = [
    "./assets/images/posts/Post thumbnail-1.png",
