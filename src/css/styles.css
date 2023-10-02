@@ -106,6 +106,10 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+   body {
+      display: flex;
+      flex-direction: column;
+   }
    .media__icon {
       width: 2rem;
       height: 2rem;
@@ -146,18 +150,17 @@ a {
    .logo {
       width: 450rem;
       height: 5rem;
-      margin: 1.4rem 0 2rem 0;
-      padding-left: 1rem;
+      margin-top: 1.4rem;
+      margin-left: 0;
    }
    .search {
-      flex: 0 0 3%;
+      width: 20rem;
       height: 4rem;
       margin: 1rem;
-      margin-left: 10rem;
    }
    .burger__menu {
       display: inline;
-      flex: 0 0 25%;
+      width: 50rem;
       height: 4rem;
       margin: 1rem 1.3rem 1rem 1rem;
    }
@@ -195,5 +198,18 @@ a {
       padding: 0 10px;
       justify-content: space-between;
       margin-top: -250px;
+   }
+   .text {
+      position: relative;
+      display: block;
+      text-overflow: ellipsis;
+   }
+   .show-more {
+      /*   width: 690px;  */
+      position: relative;
+   }
+   .show-more-height {
+      height: 65px;
+      overflow: hidden;
    }
 }
