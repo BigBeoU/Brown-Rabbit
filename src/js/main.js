@@ -41,8 +41,6 @@ function slideImage(direction) {
    });
 }
 
-const app = document.getElementById("articles--container");
-
 const sectionsData = [
    {
       imgSrc: "./assets/images/posts/Post thumbnail-1.png",
@@ -64,10 +62,51 @@ const sectionsData = [
       title: "Section 4",
       content: "Published 12/07/2021.",
    },
+   {
+      imgSrc: "./assets/images/posts/Post thumbnail-1.png",
+      title: "Section 5",
+      content: "Published 12/07/2021",
+   },
+   {
+      imgSrc: "./assets/images/posts/Post thumbnail-2.png",
+      title: "Section 6",
+      content: "Published 12/07/2021.",
+   },
+   {
+      imgSrc: "./assets/images/posts/Post thumbnail-3.png",
+      title: "Section 7",
+      content: "Published 12/07/2021.",
+   },
+   {
+      imgSrc: "./assets/images/posts/Post thumbnail-4.png",
+      title: "Section 8",
+      content: "Published 12/07/2021.",
+   },
+   {
+      imgSrc: "./assets/images/posts/Post thumbnail-1.png",
+      title: "Section 9",
+      content: "Published 12/07/2021",
+   },
+   {
+      imgSrc: "./assets/images/posts/Post thumbnail-2.png",
+      title: "Section 10",
+      content: "Published 12/07/2021.",
+   },
 ];
 
-function createSections() {
-   sectionsData.forEach((sectionData, index) => {
+let currentPage = 1;
+const articlesPerPage = 2; // Adjust as per your requirement
+const totalPages = Math.ceil(sectionsData.length / articlesPerPage);
+
+const renderArticles = (page) => {
+   const app = document.getElementById("articles--container");
+   app.innerHTML = ""; // Clear existing content
+
+   const startIndex = (page - 1) * articlesPerPage;
+   const endIndex = startIndex + articlesPerPage;
+   const sectionsToDisplay = sectionsData.slice(startIndex, endIndex);
+
+   sectionsToDisplay.forEach((sectionData, index) => {
       const div = document.createElement("div");
       div.id = `div${index + 1}`;
       div.classList = "article";
@@ -76,7 +115,7 @@ function createSections() {
    <div class="post">
    <h3><b>${sectionData.title}</b></h3>
    <h5 class="card-title">${sectionData.content}</h5>
-   <p class="article__items text show-more-height">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+   <p class="article__items text ">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
       nonumy eirmod
       tempor
       invidunt ut labore et
@@ -86,39 +125,64 @@ function createSections() {
       voluptas esse dolor rem quas porro veniam doloribus autem nostrum. Delectus, enim nisi. Quas, perspiciatis,
       temporibus voluptatem debitis porro quos quaerat corrupti vel tempore sapiente deleniti. Ad libero ipsum atque
       vel nostrum tempora, molestiae non ex, minima nam quia fugit, doloribus ea molestias in ab. Ipsum dolorem
-      necessitatibus soluta aspernatur nam consequatur velit amet. Repellendus nobis recusandae voluptas! Doloribus
-      soluta dolore sit, odit libero vitae voluptates eos adipisci eaque reprehenderit corrupti illo, eveniet maxime
-      aut nobis delectus quibusdam nisi magni ipsum minus architecto voluptate possimus iure magnam! Laborum sequi
-      officiis quis cum nobis sed magnam dolor optio odio excepturi sunt qui expedita earum nulla, eius quod
-      architecto hic laudantium commodi perferendis labore fugiat dolore consequuntur? Necessitatibus perferendis
-      quod cupiditate doloremque? Temporibus ipsa ea numquam optio, molestiae accusantium delectus. Voluptatum
-      obcaecati quasi autem beatae sunt excepturi perferendis repellat nesciunt itaque ipsum, quaerat quisquam
-      voluptate ipsam qui modi error deserunt eius suscipit reiciendis! Dolorum rem nisi recusandae perferendis natus
-      sequi animi totam doloribus deleniti est accusantium possimus iusto quo soluta expedita vel non, veritatis quas
-      illum libero esse tenetur labore magni! Magnam.</p>
+      axime voluptatem, perferendis neque
+      voluptas esse dolor rem quas porro veniam doloribus autem nostrum. Delectus, enim nisi. Quas, perspiciatis,
+      temporibus voluptatem debitis porro quos quaerat corrupti vel tempore sapiente deleniti. Ad libero ipsum atque
+      vel nostrum tempora, molestiae non ex, minima nam quia fugit, doloribus ea molestias in ab. Ipsum dolorem
+     </p>
       <a  class="btn btn-light article__items show-more">show more</a>
    </div>
-  
         `;
       app.appendChild(div);
    });
-}
+};
 
-createSections();
+document.getElementById("nextBtn").addEventListener("click", () => {
+   currentPage = (currentPage % totalPages) + 1;
+   renderArticles(currentPage);
+});
 
-// document.querySelector(".show-more").addEventListener("click", function () {
-//    var textElement = document.querySelector(".text");
-//    var showMoreButton = document.querySelector(".show-more");
-//    var btn = document.querySelector(".btn");
-//    // if (textElement.classList.contains("show-more-height")) {
-//    //    showMoreButton.textContent = "(Show More)";
-//    // } else {
-//    //    showMoreButton.textContent = "(Show Less)";
-//    // }
-//    textElement.classList.toggle("show-more-height");
-//    // btn.style.display = "none";
+document.getElementById("prevBtn").addEventListener("click", () => {
+   currentPage = currentPage === 1 ? totalPages : currentPage - 1;
+   renderArticles(currentPage);
+});
+
+renderArticles(currentPage);
+
+// document.querySelectorAll(".show-more").forEach((button) => {
+//    button.addEventListener("click", function () {
+//       var textElement = button.previousElementSibling;
+//       if (!textElement) return;
+//       textElement.classList.toggle("show-more-height");
+//       this.textContent = textElement.classList.contains("show-more-height")
+//          ? "Show Less"
+//          : "Show More";
+//    });
 // });
+const elements = [
+   ...document.querySelectorAll(".show-more"),
+   ...document.querySelectorAll(".article"),
+];
 
+elements.forEach((element) => {
+   element.addEventListener("click", function () {
+      // Checking if the clicked element has a specific class
+      if (element.classList.contains("show-more")) {
+         const textElement = element.previousElementSibling;
+         if (!textElement) return;
+         textElement.classList.toggle("show-more-height");
+         element.textContent = textElement.classList.contains(
+            "show-more-height",
+         )
+            ? "Show Less"
+            : "Show More";
+      }
+      if (element.classList.contains("article")) {
+         // Handle click event for elements with the 'article' class
+         element.classList.toggle("show-more-height-article");
+      }
+   });
+});
 // Array of sponsor logo URLs
 // const sponsorLogos = [
 //    "./assets//images//sponsors/sponsor-12.png",
