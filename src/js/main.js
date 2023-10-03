@@ -1,7 +1,4 @@
-// Get all elements with the class "burger__menu"
 const burgerMenus = document.querySelectorAll(".burger__menu");
-
-// Add a click event listener to each "burger__menu" element
 burgerMenus.forEach((item) => {
    item.addEventListener("click", function () {
       // Toggle the "collapsible--expanded" class on the parent element
@@ -137,6 +134,8 @@ const renderArticles = (page) => {
    });
 };
 
+renderArticles(currentPage);
+
 document.getElementById("nextBtn").addEventListener("click", () => {
    currentPage = (currentPage % totalPages) + 1;
    renderArticles(currentPage);
@@ -146,8 +145,6 @@ document.getElementById("prevBtn").addEventListener("click", () => {
    currentPage = currentPage === 1 ? totalPages : currentPage - 1;
    renderArticles(currentPage);
 });
-
-renderArticles(currentPage);
 
 // document.querySelectorAll(".show-more").forEach((button) => {
 //    button.addEventListener("click", function () {
@@ -161,7 +158,7 @@ renderArticles(currentPage);
 // });
 const elements = [
    ...document.querySelectorAll(".show-more"),
-   ...document.querySelectorAll(".article"),
+   ...document.querySelectorAll(".show-more-article"),
 ];
 
 elements.forEach((element) => {
@@ -177,62 +174,62 @@ elements.forEach((element) => {
             ? "Show Less"
             : "Show More";
       }
-      if (element.classList.contains("article")) {
+      if (element.classList.contains("show-more-article")) {
          // Handle click event for elements with the 'article' class
          element.classList.toggle("show-more-height-article");
       }
    });
 });
 // Array of sponsor logo URLs
-// const sponsorLogos = [
-//    "./assets//images//sponsors/sponsor-12.png",
-//    "./assets//images//sponsors/sponsor-13.png",
-//    "./assets//images//sponsors/sponsor-14.png",
-//    "./assets//images//sponsors/sponsor-15.png",
-//    "./assets//images//sponsors/sponsor-16.png",
-//    "./assets//images//sponsors/sponsor-17.png",
-//    "./assets//images//sponsors/sponsor-18.png",
-//    "./assets//images//sponsors/sponsor-19.png",
-//    "./assets//images//sponsors/sponsor-20.png",
-//    "./assets//images//sponsors/sponsor-41.png",
-//    "./assets//images//sponsors/sponsor-40.png",
-//    "./assets//images//sponsors/sponsor-1.png",
-//    "./assets//images//sponsors/sponsor-2.png",
-//    "./assets//images//sponsors/sponsor-3.png",
-//    "./assets//images//sponsors/sponsor-4.png",
-//    "./assets//images//sponsors/sponsor-5.png",
-//    "./assets//images//sponsors/sponsor-6.png",
-//    "./assets//images//sponsors/sponsor-7.png",
-//    "./assets//images//sponsors/sponsor-8.png",
-//    "./assets//images//sponsors/sponsor-9.png",
-//    "./assets//images//sponsors/sponsor-10.png",
-//    "./assets//images//sponsors/sponsor-11.png",
-// ];
+const sponsorLogos = [
+   "./assets//images//sponsors/sponsor-12.png",
+   "./assets//images//sponsors/sponsor-13.png",
+   "./assets//images//sponsors/sponsor-14.png",
+   "./assets//images//sponsors/sponsor-15.png",
+   "./assets//images//sponsors/sponsor-16.png",
+   "./assets//images//sponsors/sponsor-17.png",
+   "./assets//images//sponsors/sponsor-18.png",
+   "./assets//images//sponsors/sponsor-19.png",
+   "./assets//images//sponsors/sponsor-20.png",
+   "./assets//images//sponsors/sponsor-41.png",
+   "./assets//images//sponsors/sponsor-40.png",
+   "./assets//images//sponsors/sponsor-1.png",
+   "./assets//images//sponsors/sponsor-2.png",
+   "./assets//images//sponsors/sponsor-3.png",
+   "./assets//images//sponsors/sponsor-4.png",
+   "./assets//images//sponsors/sponsor-5.png",
+   "./assets//images//sponsors/sponsor-6.png",
+   "./assets//images//sponsors/sponsor-7.png",
+   "./assets//images//sponsors/sponsor-8.png",
+   "./assets//images//sponsors/sponsor-9.png",
+   "./assets//images//sponsors/sponsor-10.png",
+   "./assets//images//sponsors/sponsor-11.png",
+];
 
-// const instagramFeedArr = [
-//    "./assets/images/instagram-feed/instagram-image-1.png",
-//    "./assets/images/instagram-feed/instagram-image-2.png",
-//    "./assets/images/instagram-feed/instagram-image-3.png",
-//    "./assets/images/instagram-feed/instagram-image-4.png",
-//    "./assets/images/instagram-feed/instagram-image-5.png",
-//    "./assets/images/instagram-feed/instagram-image-6.png",
-//    "./assets/images/instagram-feed/instagram-image-7.png",
-//    "./assets/images/instagram-feed/instagram-image-8.png",
-//    "./assets/images/instagram-feed/instagram-image-9.png",
-// ];
+const instagramFeedArr = [
+   "./assets/images/instagram-feed/instagram-image-1.png",
+   "./assets/images/instagram-feed/instagram-image-2.png",
+   "./assets/images/instagram-feed/instagram-image-3.png",
+   "./assets/images/instagram-feed/instagram-image-4.png",
+   "./assets/images/instagram-feed/instagram-image-5.png",
+   "./assets/images/instagram-feed/instagram-image-6.png",
+   "./assets/images/instagram-feed/instagram-image-7.png",
+   "./assets/images/instagram-feed/instagram-image-8.png",
+   "./assets/images/instagram-feed/instagram-image-9.png",
+];
 
-// const renderImage = (id, arr) => {
-//    const sponsorContainer = document.getElementById(id);
+const renderImage = (id, arr) => {
+   const sponsorContainer = document.getElementById(id);
 
-//    // Render the sponsor logos using innerHTML and template literals
-//    sponsorContainer.innerHTML = arr
-//       .map(
-//          (logoUrl) => `
-//       <img src="${logoUrl}" alt="Sponsor Logo" class="sponsor-logo">
-//    `,
-//       )
-//       .join("");
-// };
+   // Render the sponsor logos using innerHTML and template literals
+   sponsorContainer.innerHTML = arr
+      .map(
+         (logoUrl) => `
+         <div class="col"> <img src="${logoUrl}" alt="Sponsor Logo" class="sponsor-logo"></div>
+   `,
+      )
+      .join("");
+};
 
-// renderImage("sponsor-container", sponsorLogos);
-// renderImage("instagram-feed", instagramFeedArr);
+renderImage("sponsor-container", sponsorLogos);
+renderImage("instagram-feed", instagramFeedArr);

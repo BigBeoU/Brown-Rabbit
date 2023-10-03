@@ -96,10 +96,14 @@ a {
    body {
       display: flex;
       flex-direction: column;
+      flex-wrap: wrap;
+      min-height: 100vh;
+      margin: 0;
    }
    nav {
       margin: 0;
       padding: 2rem 0 2rem 2rem;
+      position: fixed;
    }
 
    .menu {
@@ -154,11 +158,15 @@ a {
    a {
       text-decoration: none;
    }
-   .list {
+   ul {
       list-style: none;
       font-size: 2rem;
-      margin: 4rem 2rem 0 2rem;
       width: 100%;
+      margin: 0;
+      padding: 0;
+   }
+   .list {
+      margin: 4rem 2rem 0 2rem;
    }
 
    .list__item {
@@ -232,7 +240,7 @@ a {
    .main-content {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1rem;
+      gap: 2rem;
    }
    .article {
       margin-left: 5.5rem;
@@ -321,27 +329,65 @@ a {
 
    .pagination {
       justify-content: space-between;
-      padding-top: 0rem;
-      width: 80%;
-      margin-left: 4.5rem;
    }
    .pagination p {
       margin-top: 2rem;
       text-align: center;
    }
    .page-slide {
-      padding-top: 1rem;
+      padding: 1rem 0 1rem 0;
    }
    .page-slide {
+      background-image: linear-gradient(
+            to bottom,
+            var(--color-body-darker),
+            transparent
+         ),
+         linear-gradient(to top, var(--color-body-darker), transparent);
+      background-repeat: no-repeat;
+      background-size: 100% 1px;
+      background-position: top, bottom;
+   }
+   .main-content {
+      margin-bottom: 2rem;
+   }
+   .side__bar {
+      margin-left: 5.5rem;
       background-image: linear-gradient(
          to bottom,
          var(--color-body-darker),
          transparent
       );
       background-repeat: no-repeat;
-      background-size: 90% 1px;
-      background-position: top;
-      padding-top: 10px;
+      background-size: 100% 1px;
+      background-position: bottom;
+      padding-bottom: 2rem;
+   }
+   .col img {
+      padding: 0;
+      height: 100%;
+      width: 100%;
+   }
+   .col {
+      width: 10rem;
+      height: 10rem;
+      margin: 1rem 0 1rem 0;
+   }
+   .sponsors__logo .container {
+      margin: 0;
+      padding: 2rem 1rem;
+   }
+
+   .footer {
+      position: relative;
+      background-color: #000000;
+      padding-right: 2rem;
+   }
+   .footer p {
+      color: var(--color-headings);
+   }
+   .footer section {
+      text-align: center;
    }
 }
 
