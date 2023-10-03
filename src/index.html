@@ -46,104 +46,123 @@
             </div>
          </div>
    </nav>
-   <section class="banner">
-      <div class="card">
-         <img src="./assets/images/posts/Post thumbnail-3.png" alt="" id="sliderImage" class="slide-image">
-         <div class="card-body">
-            <p class="card-text">"To create an environment in which knowledge about coffee and its sphere can be
-               obtained."</p>
+   <main>
+      <section class="banner">
+         <div class="card card-banner">
+            <img src="./assets/images/posts/Post thumbnail-3.png" alt="" id="sliderImage" class="slide-image">
+            <div class="card-body-banner">
+               <p class="card-text">"To create an environment in which knowledge about coffee and its sphere can be
+                  obtained."</p>
+            </div>
+            <header class=" hero__content">
+               <span class="arrow_slide">
+                  <svg class="arrow-left" onclick="slideImage('backward')" width=" 24" height="24"
+                     xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                     <path d="M20 .755l-14.374 11.245 14.374 11.219-.619.781-15.381-12 15.391-12 .609.755z" />
+                  </svg>
+                  <svg class="arrow-right" onclick="slideImage('forward')" width=" 24" height="24"
+                     xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                     <path d="M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z" />
+                  </svg>
+               </span>
+            </header>
          </div>
-         <header class=" hero__content">
-            <span class="arrow_slide">
-               <svg class="arrow-left" onclick="slideImage('backward')" width=" 24" height="24"
-                  xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
-                  <path d="M20 .755l-14.374 11.245 14.374 11.219-.619.781-15.381-12 15.391-12 .609.755z" />
-               </svg>
-               <svg class="arrow-right" onclick="slideImage('forward')" width=" 24" height="24"
-                  xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
-                  <path d="M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z" />
-               </svg>
-            </span>
-         </header>
-      </div>
-   </section>
-   <!-- <div class="article" id="articles--container">
-       <p class="block__heading">To create an environment in which knowledge about coffee and its sphere can be obtained
-      </p> 
-   </div> -->
-   <!-- <div class="pagination">
-      <button class="btn">Previous</button>
-      <p>Page 1 of 3</p>
-      <button class="btn">Next</button>
-   </div>
-   <div class="side__bar">
-      <section>
-         <h3>WBC Shop</h3>
-         <p>Your shoppping car is empty</p>
-         <button class="">Visit the shop</button>
       </section>
-      <section>
-         <h2>Next event</h2>
-         <h3>World Barista Cup 2021</h3>
-         <p>Copenhagen, Denmark</p>
-         <p>Dates : 25th - 27th August 2011</p>
-         <p>Theme : SENSORY</p>
-         <button class="">Sign up now</button>
+      <section class="main-content show-more-article" id="articles--container">
       </section>
-      <section>
-         <h2>Scoreboard</h2>
-         <p>List of winners from last year</p>
-         <ul>
-            <li>2021 -?</li>
-            <li>2020 — Denmark</li>
-            <li>2021 — Sweden</li>
-            <li>2021 — Turkey</li>
-            <li>2021 — Italy</li>
-            <li>2021 — Italy</li>
-            <li>2021 — Germany</li>
-         </ul>
-      </section>
-      <section class="sponsors__logo">
-         <h3>World Barista Cup Sponsors</h3>
-         <div id="sponsor-container">
-
+      <section class="main-content ">
+         <div class="article page-slide pagination">
+            <a id="prevBtn" class="pagination-items btn btn-light article__items ">Previous</a>
+            <p class="pagination-items">Page 1 of 3</p>
+            <a id="nextBtn" class=" pagination-items btn btn-light article__items ">Next</a>
          </div>
-
       </section>
-   </div>
-   <footer>
-      <section id="footer-logo">
-         <img src="logo.png" alt="Company Logo" />
+      <section class="main-content ">
+         <section class="side__bar ">
+            <h3>WBC Shop</h3>
+            <p>Your shoppping car is empty</p>
+            <button class="btn">Visit the shop</button>
+         </section>
+         <section class="side__bar">
+            <h3>Next event</h3>
+            <h4>World Barista Cup 2021</h4>
+            <p>Copenhagen, Denmark</p>
+            <p>Dates : 25th - 27th August 2011</p>
+            <p>Theme : SENSORY</p>
+            <button class="btn">Sign up now</button>
+         </section>
+         <section class="side__bar">
+            <h3>Scoreboard</h3>
+            <h4>List of winners from last year</h4>
+            <ul class="">
+               <li class="">2021 -?</li>
+               <li>2020 — Denmark</li>
+               <li>2021 — Sweden</li>
+               <li>2021 — Turkey</li>
+               <li>2021 — Italy</li>
+               <li>2021 — Italy</li>
+               <li>2021 — Germany</li>
+            </ul>
+         </section>
+         <section class="sponsors__logo side__bar">
+            <h3>World Barista Cup Sponsors</h3>
+            <div class="container text-center">
+               <div class="row row-cols-3" id="sponsor-container">
+               </div>
+            </div>
+
+         </section>
+      </section>
+      <section class="main-content ">
+   </main>
+   <footer class="main-content footer article">
+      <section class="side__bar " id="footer-logo">
+         <img src="./assets/images/logo-white.svg" alt="Company Logo" />
+         <svg class="media__icon">
+            <use xlink:href="./assets/icons/sprite.svg#linkedin"></use>
+         </svg>
+         <svg class="media__icon">
+            <use xlink:href="./assets/icons/sprite.svg#twitter"></use>
+         </svg>
+         <svg class="media__icon">
+            <use xlink:href="./assets/icons/sprite.svg#instagram"></use>
+         </svg>
+         <svg class="media__icon">
+            <use xlink:href="./assets/icons/sprite.svg#facebook"></use>
+         </svg>
       </section>
 
-      <section id="social-media">
-         <h2>Follow Us</h2>
-         <a href="#">Facebook</a> |
-         <a href="#">Twitter</a> |
-         <a href="#">LinkedIn</a>
-      </section>
 
-      <section id="contact">
+      <section class="side__bar " id="content">
+         <h2>About World Barista Cup</h2>
+         <h5>The vision within World Barista Cup </h5>
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt quo illo ipsam blanditiis saepe eveniet
+            assumenda cupiditate quisquam ratione vitae, dolor dolorem deleniti officia optio. Obcaecati, perferendis
+            deleniti. Ratione, sapiente.
+            Ducimus quasi iusto accusamus reprehenderit a sunt doloribus possimus repellat tenetur distinctio, error
+            quia, nostrum rerum dolore voluptatem cumque, aut libero. In nemo .</p>
+      </section>
+      <section class="side__bar ">
+         <h2>Instagram Feed</h2>
+         <div class="container text-center">
+            <div class="row row-cols-3" id="instagram-feed">
+            </div>
+         </div>
+      </section>
+      <section class="side__bar " id="contact">
          <h2>Contact</h2>
          <p>World Barista Cup</p>
          <p>Email: info@worldbaristacup.com</p>
          <p>Phone: +123 456 7890</p>
       </section>
 
-      <section id="instagram-feed">
-         <h2>Instagram Feed</h2>
-      </section>
+   </footer>
 
-      <section id="content">
-         <h2>Additional Content</h2>
-         <p>Any additional content or links can go here.</p>
-      </section>
-   </footer> -->
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
-   <!-- <script src="js/main.js"></script> -->
+   <script src="js/main.js"></script>
 </body>
 
 </html>
