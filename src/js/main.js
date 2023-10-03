@@ -68,13 +68,15 @@ const sectionsData = [
 
 function createSections() {
    sectionsData.forEach((sectionData, index) => {
-      const section = document.createElement("section");
-      section.id = `section${index + 1}`;
-      section.innerHTML = `
-   <img class="article__items" src="${sectionData.imgSrc}" alt="${sectionData.title}" loading="lazy">
-   <h1 class="article__items">${sectionData.title}</h1>
-    <p class="article__items">${sectionData.content}</p>
-    <p class="article__items text show-more-height">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+      const div = document.createElement("div");
+      div.id = `div${index + 1}`;
+      div.classList = "article";
+      div.innerHTML = `
+   <img class="img-post card-img-top" src="${sectionData.imgSrc}" alt="${sectionData.title}" loading="lazy">
+   <div class="post">
+   <h3><b>${sectionData.title}</b></h3>
+   <h5 class="card-title">${sectionData.content}</h5>
+   <p class="article__items text show-more-height">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
       nonumy eirmod
       tempor
       invidunt ut labore et
@@ -94,79 +96,79 @@ function createSections() {
       voluptate ipsam qui modi error deserunt eius suscipit reiciendis! Dolorum rem nisi recusandae perferendis natus
       sequi animi totam doloribus deleniti est accusantium possimus iusto quo soluta expedita vel non, veritatis quas
       illum libero esse tenetur labore magni! Magnam.</p>
-
-    <button class="btn article__items show-more";">Read more</button>
-  </section>           
+      <a  class="btn btn-light article__items show-more">show more</a>
+   </div>
+  
         `;
-      app.appendChild(section);
+      app.appendChild(div);
    });
 }
 
 createSections();
 
-document.querySelector(".show-more").addEventListener("click", function () {
-   var textElement = document.querySelector(".text");
-   var showMoreButton = document.querySelector(".show-more");
-   var btn = document.querySelector(".btn");
-   // if (textElement.classList.contains("show-more-height")) {
-   //    showMoreButton.textContent = "(Show More)";
-   // } else {
-   //    showMoreButton.textContent = "(Show Less)";
-   // }
-   textElement.classList.toggle("show-more-height");
-   // btn.style.display = "none";
-});
+// document.querySelector(".show-more").addEventListener("click", function () {
+//    var textElement = document.querySelector(".text");
+//    var showMoreButton = document.querySelector(".show-more");
+//    var btn = document.querySelector(".btn");
+//    // if (textElement.classList.contains("show-more-height")) {
+//    //    showMoreButton.textContent = "(Show More)";
+//    // } else {
+//    //    showMoreButton.textContent = "(Show Less)";
+//    // }
+//    textElement.classList.toggle("show-more-height");
+//    // btn.style.display = "none";
+// });
 
 // Array of sponsor logo URLs
-const sponsorLogos = [
-   "./assets//images//sponsors/sponsor-12.png",
-   "./assets//images//sponsors/sponsor-13.png",
-   "./assets//images//sponsors/sponsor-14.png",
-   "./assets//images//sponsors/sponsor-15.png",
-   "./assets//images//sponsors/sponsor-16.png",
-   "./assets//images//sponsors/sponsor-17.png",
-   "./assets//images//sponsors/sponsor-18.png",
-   "./assets//images//sponsors/sponsor-19.png",
-   "./assets//images//sponsors/sponsor-20.png",
-   "./assets//images//sponsors/sponsor-41.png",
-   "./assets//images//sponsors/sponsor-40.png",
-   "./assets//images//sponsors/sponsor-1.png",
-   "./assets//images//sponsors/sponsor-2.png",
-   "./assets//images//sponsors/sponsor-3.png",
-   "./assets//images//sponsors/sponsor-4.png",
-   "./assets//images//sponsors/sponsor-5.png",
-   "./assets//images//sponsors/sponsor-6.png",
-   "./assets//images//sponsors/sponsor-7.png",
-   "./assets//images//sponsors/sponsor-8.png",
-   "./assets//images//sponsors/sponsor-9.png",
-   "./assets//images//sponsors/sponsor-10.png",
-   "./assets//images//sponsors/sponsor-11.png",
-];
+// const sponsorLogos = [
+//    "./assets//images//sponsors/sponsor-12.png",
+//    "./assets//images//sponsors/sponsor-13.png",
+//    "./assets//images//sponsors/sponsor-14.png",
+//    "./assets//images//sponsors/sponsor-15.png",
+//    "./assets//images//sponsors/sponsor-16.png",
+//    "./assets//images//sponsors/sponsor-17.png",
+//    "./assets//images//sponsors/sponsor-18.png",
+//    "./assets//images//sponsors/sponsor-19.png",
+//    "./assets//images//sponsors/sponsor-20.png",
+//    "./assets//images//sponsors/sponsor-41.png",
+//    "./assets//images//sponsors/sponsor-40.png",
+//    "./assets//images//sponsors/sponsor-1.png",
+//    "./assets//images//sponsors/sponsor-2.png",
+//    "./assets//images//sponsors/sponsor-3.png",
+//    "./assets//images//sponsors/sponsor-4.png",
+//    "./assets//images//sponsors/sponsor-5.png",
+//    "./assets//images//sponsors/sponsor-6.png",
+//    "./assets//images//sponsors/sponsor-7.png",
+//    "./assets//images//sponsors/sponsor-8.png",
+//    "./assets//images//sponsors/sponsor-9.png",
+//    "./assets//images//sponsors/sponsor-10.png",
+//    "./assets//images//sponsors/sponsor-11.png",
+// ];
 
-const instagramFeedArr = [
-   "./assets/images/instagram-feed/instagram-image-1.png",
-   "./assets/images/instagram-feed/instagram-image-2.png",
-   "./assets/images/instagram-feed/instagram-image-3.png",
-   "./assets/images/instagram-feed/instagram-image-4.png",
-   "./assets/images/instagram-feed/instagram-image-5.png",
-   "./assets/images/instagram-feed/instagram-image-6.png",
-   "./assets/images/instagram-feed/instagram-image-7.png",
-   "./assets/images/instagram-feed/instagram-image-8.png",
-   "./assets/images/instagram-feed/instagram-image-9.png",
-];
+// const instagramFeedArr = [
+//    "./assets/images/instagram-feed/instagram-image-1.png",
+//    "./assets/images/instagram-feed/instagram-image-2.png",
+//    "./assets/images/instagram-feed/instagram-image-3.png",
+//    "./assets/images/instagram-feed/instagram-image-4.png",
+//    "./assets/images/instagram-feed/instagram-image-5.png",
+//    "./assets/images/instagram-feed/instagram-image-6.png",
+//    "./assets/images/instagram-feed/instagram-image-7.png",
+//    "./assets/images/instagram-feed/instagram-image-8.png",
+//    "./assets/images/instagram-feed/instagram-image-9.png",
+// ];
 
-const renderImage = (id, arr) => {
-   const sponsorContainer = document.getElementById(id);
+// const renderImage = (id, arr) => {
+//    const sponsorContainer = document.getElementById(id);
 
-   // Render the sponsor logos using innerHTML and template literals
-   sponsorContainer.innerHTML = arr
-      .map(
-         (logoUrl) => `
-      <img src="${logoUrl}" alt="Sponsor Logo" class="sponsor-logo">
-   `,
-      )
-      .join("");
-};
+//    // Render the sponsor logos using innerHTML and template literals
+//    sponsorContainer.innerHTML = arr
+//       .map(
+//          (logoUrl) => `
+//       <img src="${logoUrl}" alt="Sponsor Logo" class="sponsor-logo">
+//    `,
+//       )
+//       .join("");
+// };
 
-renderImage("sponsor-container", sponsorLogos);
-renderImage("instagram-feed", instagramFeedArr);
+// renderImage("sponsor-container", sponsorLogos);
+// renderImage("instagram-feed", instagramFeedArr);
