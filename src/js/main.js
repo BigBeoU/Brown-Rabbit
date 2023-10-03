@@ -106,7 +106,7 @@ const renderArticles = (page) => {
    sectionsToDisplay.forEach((sectionData, index) => {
       const div = document.createElement("div");
       div.id = `div${index + 1}`;
-      div.classList = "article";
+      div.classList = "article show-more-article";
       div.innerHTML = `
    <img class="img-post card-img-top" src="${sectionData.imgSrc}" alt="${sectionData.title}" loading="lazy">
    <div class="post">

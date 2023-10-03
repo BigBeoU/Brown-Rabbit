@@ -233,17 +233,23 @@ a {
       background-color: var(--color-secondary);
       color: var(--color-headings);
       margin-top: 60%;
-      width: 80%;
+
       height: 25rem;
-      margin-left: 5.5rem;
    }
+   main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
    .main-content {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2rem;
    }
-   .article {
-      margin-left: 5.5rem;
+   .article,
+   .card-body-banner {
+      margin-left: 4.5rem;
       width: 80%;
    }
 
