@@ -11,40 +11,40 @@
 </head>
 
 <body>
-   <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-      <div class=" container-md collapsible ">
-         <div class="container-fluid menu">
-            <img class="logo" src="./assets/logo/logo-white.svg" alt="">
-            <form class="d-flex" role="search">
-               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            </form>
-            <img class="logo search" src="./assets/icons/search.svg" alt="">
-            <img class="logo burger__menu" src="./assets/icons/burger-menu.svg" alt="">
+   <nav class="navbar bg-dark border-bottom border-body collapsible " data-bs-theme="dark">
+
+      <img class="logo" src="./assets/logo/logo-white.svg" alt="">
+      <form class="d-flex" role="search">
+         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <img class="logo search" src="./assets/icons/search.svg" alt="">
+      <img class="logo burger__menu" src="./assets/icons/burger-menu.svg" alt="">
+
+      <div class="collapsible__content collapsible--expanded ">
+         <ul class="list list--inline collasible__items">
+            <li class="list__item"><a href="#">About us</a></li>
+            <li class="list__item"><a href="#">Events</a></li>
+            <li class="list__item"><a href="#">Nordic roaster</a></li>
+            <li class="list__item"><a href="#">Results</a></li>
+            <li class="list__item"><a href="#">Links</a></li>
+            <li class="list__item"><a href="#">Contacts</a></li>
+         </ul>
+         <div class="collapsible__media">
+            <svg class="media__icon">
+               <use xlink:href="./assets/icons/sprite.svg#linkedin"></use>
+            </svg>
+            <svg class="media__icon">
+               <use xlink:href="./assets/icons/sprite.svg#twitter"></use>
+            </svg>
+            <svg class="media__icon">
+               <use xlink:href="./assets/icons/sprite.svg#instagram"></use>
+            </svg>
+            <svg class="media__icon">
+               <use xlink:href="./assets/icons/sprite.svg#facebook"></use>
+            </svg>
          </div>
-         <div class="collapsible__content collapsible--expanded ">
-            <ul class="list list--inline collasible__items">
-               <li class="list__item"><a href="#">About us</a></li>
-               <li class="list__item"><a href="#">Events</a></li>
-               <li class="list__item"><a href="#">Nordic roaster</a></li>
-               <li class="list__item"><a href="#">Results</a></li>
-               <li class="list__item"><a href="#">Links</a></li>
-               <li class="list__item"><a href="#">Contacts</a></li>
-            </ul>
-            <div class="collapsible__media">
-               <svg class="media__icon">
-                  <use xlink:href="./assets/icons/sprite.svg#linkedin"></use>
-               </svg>
-               <svg class="media__icon">
-                  <use xlink:href="./assets/icons/sprite.svg#twitter"></use>
-               </svg>
-               <svg class="media__icon">
-                  <use xlink:href="./assets/icons/sprite.svg#instagram"></use>
-               </svg>
-               <svg class="media__icon">
-                  <use xlink:href="./assets/icons/sprite.svg#facebook"></use>
-               </svg>
-            </div>
-         </div>
+      </div>
+      </div>
    </nav>
    <main>
       <section class="banner">

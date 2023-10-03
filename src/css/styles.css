@@ -61,9 +61,7 @@ p {
    height: 20x;
    margin: 1rem;
 }
-.search:hover {
-   transform: rotate(45deg);
-} */
+*/
 
 /* Link */
 a {
@@ -85,7 +83,13 @@ a {
    margin: 0 0 0 2rem;
    padding: 0;
 }
-
+.media__icon {
+   width: 3rem;
+   height: 2rem;
+   margin-left: 2rem;
+   margin-bottom: 2rem;
+   fill: var(--color-body);
+}
 @media (min-width: 376px) and (max-width: 768px) {
    h3 {
       color: var(--color-secondary);
@@ -105,7 +109,6 @@ a {
       padding: 2rem 0 2rem 2rem;
       position: fixed;
    }
-
    .menu {
       display: flex;
       justify-content: space-between;
@@ -145,14 +148,6 @@ a {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-   }
-
-   .media__icon {
-      width: 3rem;
-      height: 2rem;
-      margin-left: 2rem;
-      margin-bottom: 2rem;
-      fill: var(--color-body);
    }
 
    a {
@@ -397,17 +392,79 @@ a {
    }
 }
 
-/* @media (min-width: 1200px) {
-   .navbar {
-      display: flex;
-      flex-wrap: nowrap;
-   }
+@media (min-width: 769px) {
    .burger__menu {
-      width: 5rem;
-      height: 5rem;
+      display: none;
+   }
+
+   .menu {
+      align-items: center;
+      flex-wrap: wrap;
+   }
+   .logo {
+      margin-right: auto;
    }
    .search {
-      width: 5rem;
-      height: 5rem;
+      width: 3rem;
    }
-} */
+   .search:hover {
+      transform: rotate(45deg);
+   }
+   form {
+      width: 20rem;
+      margin-left: auto;
+   }
+   .form-control {
+      border: none;
+      border-bottom: 1px solid #ffffff;
+      width: 100%;
+      color: #ffffff;
+      padding: 0;
+      outline: 0;
+      font-size: 2.5rem;
+   }
+
+   .collapsible__content {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      flex-wrap: wrap;
+   }
+   .collapsible__media {
+      margin-left: auto;
+      padding-left: 0;
+   }
+
+   .list {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      flex-wrap: nowrap;
+      order: 1;
+      flex-basis: 100%;
+   }
+   .list--inline .list__item {
+      width: 100%;
+      display: inline-block;
+      margin-right: 2rem;
+      padding: 0 2rem;
+      font-size: 2rem;
+   }
+
+   .list__item > a:hover {
+      color: #707070;
+   }
+
+   .media__icon {
+      width: 5rem;
+      margin-left: auto;
+   }
+   .card {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      overflow: visible;
+      height: 100%;
+      border: 0;
+   }
+}
